@@ -4,7 +4,7 @@ function pivotIndex(arr, startIndex = 0, endIndex = arr.length + 1) {
   let theAimedIndex = startIndex;
   let i = startIndex + 1;
 
-  while (i <= arr.length) {
+  while (i <= endIndex) {
     if (pivot > arr[i]) {
       theAimedIndex++;
       [arr[theAimedIndex], arr[i]] = [arr[i], arr[theAimedIndex]];
@@ -16,5 +16,19 @@ function pivotIndex(arr, startIndex = 0, endIndex = arr.length + 1) {
   return theAimedIndex;
 }
 
-console.log(pivotIndex([5, 2, 1, 8, 4, 3, 7, 6], 0, 9));
-// console.log(pivotIndex([4, 8, 2, 1, 5, 7, 6, 3], 0, 9));
+function quickSort(arr, left = 0, right = arr.length - 1) {
+  // ? base element here
+  if (left < right) {
+    let getPivotIndex = pivotIndex(arr, left, right);
+
+    // left
+    quickSort(arr, left, getPivotIndex - 1);
+
+    // right
+    quickSort(arr, getPivotIndex + 1, right);
+  }
+  return arr;
+}
+
+console.log(quickSort([5, 2, 1, 8, 4, 3, 7, 6]));
+console.log(pivotIndex([4, 8, 2, 1, 5, 7, 6, 3]));
