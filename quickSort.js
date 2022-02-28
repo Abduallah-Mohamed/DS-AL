@@ -32,4 +32,4 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 
 console.log(quickSort([5, 2, 1, 8, 4, 3, 7, 6]));
 console.log(quickSort([4, 8, 2, 1, 5, 7, 6, 3]));
-console.log(quickSort([200, -10, -200, 11, 33, 99]));
+console.log(quickSort([200, -10, -200, 11, 33, 99, 0, 99, 33, -10]));
