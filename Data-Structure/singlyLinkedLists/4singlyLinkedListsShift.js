@@ -45,6 +45,7 @@ class SinglyLinkedList {
     return current;
   }
 
+  // delete
   shift() {
     if (!this.head) return undefined;
     let currentHead = this.head;
