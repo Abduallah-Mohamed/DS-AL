@@ -29,16 +29,18 @@ class Student {
     return sum / this.scores.length;
   }
 
-  static enrollStudents() {
-    return "hello from the other side,,,";
+  // ? applying to all instances of this class
+  static enrollStudents(students) {
+    return `enrolled ${students.length} students`;
   }
 }
 
 const student = new Student("Abduallah", "Mohamed", 2020);
 const student2 = new Student("mohamed", "sarhan");
+const student3 = new Student("farouq", "Mohamed");
 
 console.log(student.markLate());
 console.log(student.addScore(1));
-console.log(Student.enrollStudents());
+console.log(Student.enrollStudents([student, student2, student3])); // ? how to call static methods static method
 
 // console.log(student2.markLate());

@@ -20,8 +20,8 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = this.tail = newNode;
     } else {
-      this.tail.next = newNode;
-      this.tail = newNode;
+      this.tail.next = newNode; // * point the tail to the new node
+      this.tail = newNode; // * assign the new node to the tail
     }
     this.length++;
     return this;

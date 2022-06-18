@@ -8,6 +8,7 @@ class Point {
     const dx = a.x - b.x;
     const dy = a.y - b.y;
 
+    console.log(dx, dy);
     return Math.hypot(dx, dy);
   }
 }
@@ -15,5 +16,4 @@ class Point {
 const p1 = new Point(5, 5);
 const p2 = new Point(10, -3);
 
-console.log(Point.calcDistance(p1, p2));
-console.log(p2);
+const distance = Point.calcDistance(p1, p2);
